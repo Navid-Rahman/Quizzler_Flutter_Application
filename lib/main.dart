@@ -12,9 +12,9 @@ class Quizzler extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.grey.shade900,
-        body: SafeArea(
+        body: const SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: QuizPage(),
           ),
         ),
@@ -24,9 +24,24 @@ class Quizzler extends StatelessWidget {
 }
 
 class QuizPage extends StatefulWidget {
+  const QuizPage({super.key});
+
   @override
-  _QuizPageState createState() => _QuizPageState();
+  _QuizPageState createState() {
+    return _QuizPageState();
+  }
 }
+
+List<Icon> scoreKeeper = [
+  const Icon(
+    Icons.check,
+    color: Colors.green,
+  ),
+  const Icon(
+    Icons.close,
+    color: Colors.red,
+  ),
+];
 
 class _QuizPageState extends State<QuizPage> {
   @override
@@ -54,41 +69,55 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.green,
+            child: TextButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green)),
+              onPressed: () {
+                setState(() {
+                  scoreKeeper.add(const Icon(
+                    Icons.check,
+                    color: Colors.green,
+                  ));
+                });
+              },
               child: const Text(
                 'True',
                 style: TextStyle(
+                  fontSize: 30,
                   color: Colors.white,
-                  fontSize: 20.0,
                 ),
               ),
-              onPressed: () {
-                //The user picked true.
-              },
             ),
           ),
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
-            child: FlatButton(
-              color: Colors.red,
+            child: TextButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.red)),
+              onPressed: () {
+                setState(() {
+                  scoreKeeper.add(const Icon(
+                    Icons.close,
+                    color: Colors.red,
+                  ));
+                });
+              },
               child: const Text(
                 'False',
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 30,
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {
-                //The user picked false.
-              },
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        //TODO: Add a Row here for score keeping
+        Row(
+          children: scoreKeeper,
+        )
       ],
     );
   }
