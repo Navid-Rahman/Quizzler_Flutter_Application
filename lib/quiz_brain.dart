@@ -1,8 +1,6 @@
 import 'package:quizzler_app/questions.dart';
 
 class QuizBrain {
-  int _questionNumber = 0;
-
   final List<Question> _questionBank = [
     Question(
         questionAnswer: true,
@@ -35,6 +33,8 @@ class QuizBrain {
             'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.'),
   ];
 
+  int _questionNumber = 0;
+
   void nextQuestion() {
     if (_questionNumber < _questionBank.length - 1) {
       _questionNumber++;
@@ -51,7 +51,6 @@ class QuizBrain {
 
   bool isFinished() {
     if (_questionNumber >= _questionBank.length - 1) {
-      print('Now returning true');
       return true;
     } else {
       return false;
