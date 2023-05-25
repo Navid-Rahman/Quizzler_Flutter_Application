@@ -11,3 +11,8 @@ The app demonstrates the usage of stateful widgets, button styling, dynamic cont
 
 # Screenshots:
 ![Screenshot_20230525_134339](https://github.com/Navid-Rahman/Quizzler_Flutter_Application/assets/77515075/dd544df6-4826-45f6-ae58-8be76d5493f5)
+
+# Screen Recording
+
+https://github.com/Navid-Rahman/Quizzler_Flutter_Application/assets/77515075/6cdc8767-0b5d-43a8-9f38-18ea75fe915d
+
