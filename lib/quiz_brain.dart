@@ -1,7 +1,9 @@
 import 'package:quizzler_app/questions.dart';
 
 class QuizBrain {
-  List<Question> questionBank = [
+  int _questionNumber = 0;
+
+  final List<Question> _questionBank = [
     Question(
         questionAnswer: true,
         questionText: 'Some cats are actually allergic to humans.'),
@@ -32,4 +34,18 @@ class QuizBrain {
         questionText:
             'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.'),
   ];
+
+  void nextQuestion() {
+    if (_questionNumber < _questionBank.length - 1) {
+      _questionNumber++;
+    }
+  }
+
+  String getQuestionText() {
+    return _questionBank[_questionNumber].questionText;
+  }
+
+  bool getCorrectAnswer() {
+    return _questionBank[_questionNumber].questionAnswer;
+  }
 }
