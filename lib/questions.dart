@@ -3,14 +3,9 @@ class Question {
   String questionText;
 
   Question({required this.questionAnswer, required this.questionText});
-}
 
-// class Question {
-//   String questionText;
-//   bool questionAnswer;
-//
-//   Question(String s, {String q, bool a}) {
-//     questionText = q;
-//     questionAnswer = a;
-//   }
-// }
+  // Question({required bool questionAnswer, required String questionText}) {
+  //   this.questionAnswer = questionAnswer;
+  //   this.questionText = questionText;
+  // }
+}
