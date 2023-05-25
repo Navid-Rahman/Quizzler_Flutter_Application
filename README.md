@@ -10,3 +10,4 @@ The Quizzler App is a simple quiz game built with Flutter. It presents a series 
 The app demonstrates the usage of stateful widgets, button styling, dynamic content rendering, and state management with the setState method.
 
 # Screenshots:
+![Screenshot_20230525_134339](https://github.com/Navid-Rahman/Quizzler_Flutter_Application/assets/77515075/dd544df6-4826-45f6-ae58-8be76d5493f5)
