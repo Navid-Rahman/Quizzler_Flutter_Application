@@ -1,16 +1,12 @@
-# quizzler_app
+#Quizzler App
+The Quizzler App is a simple quiz game built with Flutter. It presents a series of true or false questions to the user and keeps track of their score. The app utilizes the rflutter_alert package to display an alert when the quiz is completed.
 
-A new Flutter project.
+#Features:
+- Multiple-choice questions with true or false answers
+- Instant feedback on the correctness of user's answers
+- Scorekeeping using icons to display correct and incorrect answers
+- Alert dialog to indicate the end of the quiz and offer a reset option
 
-## Getting Started
+The app demonstrates the usage of stateful widgets, button styling, dynamic content rendering, and state management with the setState method.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#Screenshots:
